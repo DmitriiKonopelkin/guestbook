@@ -5,7 +5,12 @@
     $message = htmlspecialchars($_POST['message']);
     $message = nl2br($message);
     $date = date('Y-m-d H:i:s');
-    $post = "<p><b>Имя:</b> $name<br><b>Email:</b> $email<br><b>Дата:</b><i> $date</i><br><b>Сообщение:</b><br>$message</p>\n";;
+    $post = "<p><b>Имя:</b> $name<br><b>Email:</b> $email<br><b>Дата:</b><i> $date</i><br><b>Сообщение:</b><br>$message</p>\n";
+
+    if (!file_exists('data.txt')) {
+        touch('data.txt');
+    }
+
     file_put_contents('data.txt',$post,FILE_APPEND);
     header('Location:guestbook.php');
  }
