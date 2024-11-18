@@ -22,6 +22,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гостевая книжка</title>
+    <style>
+
+        body {
+
+       font-family:Verdana;
+       font-size:18px;
+    }
+        
+        
+        input, textarea {
+            font-size:20px;
+            padding:5px 5px;
+            margin-bottom:20px;
+            border:2px solid #ebb217;
+        }
+
+        input[type='submit'] {
+            border:1px solid orange;
+            border-radius:10px;
+            background-color:orange;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Гостевая книга</h1>
